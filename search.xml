@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo优化配置]]></title>
+    <url>%2F2015%2F01%2F03%2FHexoOptimize%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>优化</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo安装配置]]></title>
+    <url>%2F2015%2F01%2F02%2FHexoInstall%2F</url>
+    <content type="text"><![CDATA[这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序： node.js git 安装Hexo所有必备的应用程序安装完成之后，即可使用npm安装Hexo1$ npm install -g hexo-cli]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[来到GitHub Pages]]></title>
+    <url>%2F2015%2F01%2F02%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[以前都是在博客园、CSDN之类的网站上零零散散的分享一些文章，自己也没认真去管理，时间久了账号密码也忘记了，最后就像风中的沙，消失的无影无踪了，连个念想都没留下，有点遗憾。这次看见GitHub开放Pages业务，想着干脆搭建个自己的博客吧，希望自己将这个博客坚持维护下去，加油！！]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
+      </tags>
+  </entry>
+</search>
