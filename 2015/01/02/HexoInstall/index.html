@@ -86,18 +86,20 @@
 
 
 
-<meta name="description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序：  node.js git  安装Hexo所有必备的应用程序安装完">
+<meta name="description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 在Hexo中有两份主要的配置文件，其名称都是_config.yml。其中，一份位于站点根目录下，主要包含Hexo本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主">
 <meta name="keywords" content="Hexo,安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo安装配置">
 <meta property="og:url" content="https://maomi20150102.github.io/2015/01/02/HexoInstall/index.html">
 <meta property="og:site_name" content="Oliver&#39;s Blog">
-<meta property="og:description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序：  node.js git  安装Hexo所有必备的应用程序安装完">
+<meta property="og:description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 在Hexo中有两份主要的配置文件，其名称都是_config.yml。其中，一份位于站点根目录下，主要包含Hexo本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://maomi20150102.github.io/images/validation-default-scheme-mac.png">
 <meta property="og:updated_time" content="2015-01-02T01:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo安装配置">
-<meta name="twitter:description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序：  node.js git  安装Hexo所有必备的应用程序安装完">
+<meta name="twitter:description" content="这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 在Hexo中有两份主要的配置文件，其名称都是_config.yml。其中，一份位于站点根目录下，主要包含Hexo本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主">
+<meta name="twitter:image" content="https://maomi20150102.github.io/images/validation-default-scheme-mac.png">
 
 
 
@@ -414,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  170
+                  580
                 </span>
               
 
@@ -441,12 +443,18 @@
       
         <p>这次搭建博客使用了比较流行的Hexo，主题使用的是Next。<br>Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。</p>
 <p>下面是我们的安装和配置步骤。</p>
+<p>在Hexo中有两份主要的配置文件，其名称都是_config.yml。其中，一份位于站点根目录下，主要包含Hexo本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置相关的选项。</p>
+<p>为了描述方便，在以后的说明中，将前者称为站点配置文件，后者称为主题配置文件。</p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序：</p>
 <ul>
 <li><a href="https://nodejs.org" target="_blank" rel="noopener">node.js</a></li>
 <li><a href="http://git-scm.com" target="_blank" rel="noopener">git</a></li>
 </ul>
 <h3 id="安装Hexo-1"><a href="#安装Hexo-1" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>所有必备的应用程序安装完成之后，即可使用npm安装Hexo<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装Next"><a href="#安装Next" class="headerlink" title="安装Next"></a>安装Next</h2><h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>在终端窗口下，定位到Hexo站点目录下，使用Git clone代码<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> your-hexo-site</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>与所有的Hexo主题一样，在下载完文件之后，打开站点配置文件，找到theme字段，并将其值更改为next。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: <span class="keyword">next</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><p>首先启动Hexo本地站点，并开启调试模式（即加上 –debug），整个命令是hexo s –debug。在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助你更好的定位错误。当命令行输出中提示出：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running <span class="keyword">at</span> <span class="keyword">http</span>://<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">4000</span>/. Press Ctrl+C <span class="built_in">to</span> <span class="built_in">stop</span>.</span><br></pre></td></tr></table></figure></p>
+<p>此时即可使用浏览器访问 <a href="http://localhost" target="_blank" rel="noopener">http://localhost</a> ，检查站点是否正确运行。<br>当你看到站点的外观与下图所示类似时即说明你已经成功安装Next主题。这是Next默认的scheme —— Muse<br><img src="https://maomi20150102.github.io/images/validation-default-scheme-mac.png" alt=""><br>现在，已经成功安装并启用了Next主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。</p>
 
       
     </div>
@@ -690,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Next"><span class="nav-number">2.</span> <span class="nav-text">安装Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载主题"><span class="nav-number">2.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">2.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题"><span class="nav-number">2.3.</span> <span class="nav-text">验证主题</span></a></li></ol></li></ol></div>
             
 
           </div>

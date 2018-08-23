@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[Hexo安装配置]]></title>
     <url>%2F2015%2F01%2F02%2FHexoInstall%2F</url>
-    <content type="text"><![CDATA[这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序： node.js git 安装Hexo所有必备的应用程序安装完成之后，即可使用npm安装Hexo1$ npm install -g hexo-cli]]></content>
+    <content type="text"><![CDATA[这次搭建博客使用了比较流行的Hexo，主题使用的是Next。Hexo以及next的作者已经将功能做的相当完善，对从未接触过的新手也很友好，整个搭建流程非常简单，感谢作者为我等伸手党做出的无私奉献。 下面是我们的安装和配置步骤。 在Hexo中有两份主要的配置文件，其名称都是_config.yml。其中，一份位于站点根目录下，主要包含Hexo本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置相关的选项。 为了描述方便，在以后的说明中，将前者称为站点配置文件，后者称为主题配置文件。 安装Hexo安装前提安装Hexo非常简单。然而在安装之前，你需要检查一下你的电脑是否已安装了以下应用程序： node.js git 安装Hexo所有必备的应用程序安装完成之后，即可使用npm安装Hexo1$ npm install -g hexo-cli 安装Next下载主题在终端窗口下，定位到Hexo站点目录下，使用Git clone代码12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next 启用主题与所有的Hexo主题一样，在下载完文件之后，打开站点配置文件，找到theme字段，并将其值更改为next。1theme: next 验证主题首先启动Hexo本地站点，并开启调试模式（即加上 –debug），整个命令是hexo s –debug。在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助你更好的定位错误。当命令行输出中提示出：1INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop. 此时即可使用浏览器访问 http://localhost ，检查站点是否正确运行。当你看到站点的外观与下图所示类似时即说明你已经成功安装Next主题。这是Next默认的scheme —— Muse现在，已经成功安装并启用了Next主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
