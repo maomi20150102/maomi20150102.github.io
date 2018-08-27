@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  580
+                  1,145
                 </span>
               
 
@@ -456,6 +456,130 @@
 <h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><p>首先启动Hexo本地站点，并开启调试模式（即加上 –debug），整个命令是hexo s –debug。在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助你更好的定位错误。当命令行输出中提示出：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running <span class="keyword">at</span> <span class="keyword">http</span>://<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">4000</span>/. Press Ctrl+C <span class="built_in">to</span> <span class="built_in">stop</span>.</span><br></pre></td></tr></table></figure></p>
 <p>此时即可使用浏览器访问 <a href="http://localhost" target="_blank" rel="noopener">http://localhost</a> ，检查站点是否正确运行。<br>当你看到站点的外观与下图所示类似时即说明你已经成功安装Next主题。这是Next默认的scheme —— Muse</p>
 <p><img src="https://maomi20150102.github.io/images/validation-default-scheme-mac.png" alt=""><br>现在，已经成功安装并启用了Next主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。</p>
+<h2 id="配置Next"><a href="#配置Next" class="headerlink" title="配置Next"></a>配置Next</h2><h3 id="选择scheme"><a href="#选择scheme" class="headerlink" title="选择scheme"></a>选择scheme</h3><p>scheme是Next提供的一种特性，借助于scheme，Next提供多种不同的外观。同时，几乎所有的配置都可以在scheme直接共用。目前Next支持三种scheme，分别是：</p>
+<ul>
+<li>Muse -默认scheme，这是next最初的版本，黑白主调，大量留白</li>
+<li>Mist -Muse的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces -双栏scheme，有人觉得小家碧玉，看各人喜好</li>
+</ul>
+<p>scheme的切换通过更改主题配置文件，搜索scheme关键字。你会看到有三行scheme的配置，将你需要启用的scheme前面的注释#去除即可。</p>
+<blockquote>
+<p>以下是开启Mist</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">scheme: Muse</span></span><br><span class="line">scheme: Mist</span><br><span class="line"><span class="meta">#</span><span class="bash">scheme: Pisces</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h3><p>编辑站点配置文件，将language设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-Hans</span><br></pre></td></tr></table></figure></p>
+<p>目前Next支持的语言如以下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>代码</th>
+<th>设定示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>en</td>
+<td>language: en</td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td>zh-Hans</td>
+<td>language: zh-Hans</td>
+</tr>
+<tr>
+<td>Français</td>
+<td>fr-FR</td>
+<td>language: fr-FR</td>
+</tr>
+<tr>
+<td>Português</td>
+<td>pt</td>
+<td>language: pt  or language: pt-BR</td>
+</tr>
+<tr>
+<td>繁體中文</td>
+<td>zh-hk 或者 zh-tw</td>
+<td>language: zh-hk</td>
+</tr>
+<tr>
+<td>Русский язык</td>
+<td>ru</td>
+<td>language: ru</td>
+</tr>
+<tr>
+<td>Deutsch</td>
+<td>de</td>
+<td>language: de</td>
+</tr>
+<tr>
+<td>日本語</td>
+<td>ja</td>
+<td>language: ja</td>
+</tr>
+<tr>
+<td>Indonesian</td>
+<td>id</td>
+<td>language: id</td>
+</tr>
+<tr>
+<td>Korean</td>
+<td>ko</td>
+<td>language: ko</td>
+</tr>
+</tbody>
+</table>
+<h3 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。next使用的是font awesome提供的图标，font awesome提供了600+的图标，可以满足绝大多数的场景，同时无须担心在retina屏幕下图标模糊的问题。<br>编辑主题配置文件，修改以下内容：</p>
+<ol>
+<li>设定菜单内容，对应的字段是menu。菜单内容的设置格式是：item name: link。其中item name是一个名称，这个名称并不直接显示在页面上，它将用于匹配图标以及翻译。<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  <span class="selector-id">#about</span>: /about</span><br><span class="line">  <span class="selector-id">#categories</span>: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  <span class="selector-id">#commonweal</span>: /<span class="number">404</span>.html</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>若你的站点运行在子目录中，请将链接前缀的 / 去掉</p>
+</blockquote>
+<p>next默认的菜单项有（标注*的项表示需要手动创建这个页面）</p>
+<table>
+<thead>
+<tr>
+<th>键值</th>
+<th>设定值</th>
+<th>显示文本（简体中文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>home</td>
+<td>home: /</td>
+<td>主页</td>
+</tr>
+<tr>
+<td>archives</td>
+<td>archives: /archives</td>
+<td>归档页</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>categories: /categories</td>
+<td>分类页*</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>tags: /tags</td>
+<td>标签页*</td>
+</tr>
+<tr>
+<td>about</td>
+<td>about； /about</td>
+<td>关于页面*</td>
+</tr>
+<tr>
+<td>commonweal</td>
+<td>commonweal: /404.html</td>
+<td>公益404*</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -699,7 +823,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Next"><span class="nav-number">2.</span> <span class="nav-text">安装Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载主题"><span class="nav-number">2.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">2.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题"><span class="nav-number">2.3.</span> <span class="nav-text">验证主题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Next"><span class="nav-number">2.</span> <span class="nav-text">安装Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载主题"><span class="nav-number">2.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">2.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题"><span class="nav-number">2.3.</span> <span class="nav-text">验证主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next"><span class="nav-number">3.</span> <span class="nav-text">配置Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择scheme"><span class="nav-number">3.1.</span> <span class="nav-text">选择scheme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置语言"><span class="nav-number">3.2.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置菜单"><span class="nav-number">3.3.</span> <span class="nav-text">设置菜单</span></a></li></ol></li></ol></div>
             
 
           </div>
