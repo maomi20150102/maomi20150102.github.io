@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,145
+                  1,718
                 </span>
               
 
@@ -467,7 +467,8 @@
 <p>以下是开启Mist</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">scheme: Muse</span></span><br><span class="line">scheme: Mist</span><br><span class="line"><span class="meta">#</span><span class="bash">scheme: Pisces</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h3><p>编辑站点配置文件，将language设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-Hans</span><br></pre></td></tr></table></figure></p>
+<h3 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h3><p>编辑站点配置文件，将language设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-Hans</span><br></pre></td></tr></table></figure>
 <p>目前Next支持的语言如以下表格所示：</p>
 <table>
 <thead>
@@ -532,9 +533,9 @@
 </table>
 <h3 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。next使用的是font awesome提供的图标，font awesome提供了600+的图标，可以满足绝大多数的场景，同时无须担心在retina屏幕下图标模糊的问题。<br>编辑主题配置文件，修改以下内容：</p>
 <ol>
-<li>设定菜单内容，对应的字段是menu。菜单内容的设置格式是：item name: link。其中item name是一个名称，这个名称并不直接显示在页面上，它将用于匹配图标以及翻译。<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  <span class="selector-id">#about</span>: /about</span><br><span class="line">  <span class="selector-id">#categories</span>: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  <span class="selector-id">#commonweal</span>: /<span class="number">404</span>.html</span><br></pre></td></tr></table></figure>
-</li>
+<li>设定菜单内容，对应的字段是menu。菜单内容的设置格式是：item name: link。其中item name是一个名称，这个名称并不直接显示在页面上，它将用于匹配图标以及翻译。</li>
 </ol>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  <span class="selector-id">#about</span>: /about</span><br><span class="line">  <span class="selector-id">#categories</span>: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  <span class="selector-id">#commonweal</span>: /<span class="number">404</span>.html</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>若你的站点运行在子目录中，请将链接前缀的 / 去掉</p>
 </blockquote>
@@ -580,6 +581,44 @@
 </tr>
 </tbody>
 </table>
+<ol start="2">
+<li><p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。hexo在生成的时候将使用这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在next主题目录下的language/{language}.yml（{language}为你所使用的语言）。<br>以简体中文为例，若你需要添加一个菜单项，比如something。那么就需要修改简体中文对应的翻译文件languages/zh-Hans.yml，在menu字段下添加一项：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> 首页</span><br><span class="line"><span class="symbol">  archives:</span> 归档</span><br><span class="line"><span class="symbol">  categories:</span> 分类</span><br><span class="line"><span class="symbol">  tags:</span> 标签</span><br><span class="line"><span class="symbol">  about:</span> 关于</span><br><span class="line"><span class="symbol">  search:</span> 搜索</span><br><span class="line"><span class="symbol">  commonweal:</span> 公益<span class="number">404</span></span><br><span class="line"><span class="symbol">  something:</span> 有料</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设定菜单项的图标，对应的字段是menu_icons。此设定格式是item name: icon name，其中item name与上一步所配置的菜单名字对应，icon name是font awesome图标的名字。而enable可用于控制是否显示图标，你可以设置成false来去掉图标。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu_icons:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  # Icon Mapping.</span><br><span class="line">  home: home</span><br><span class="line">  about: user</span><br><span class="line">  categories: th</span><br><span class="line">  tags: tags</span><br><span class="line">  archives: archive</span><br><span class="line">  commonweal: heartbeat</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 ?作为图标。</p>
+</blockquote>
+<blockquote>
+<p>请注意键值（如 home）的大小写要严格匹配</p>
+</blockquote>
+<h3 id="设置侧栏"><a href="#设置侧栏" class="headerlink" title="设置侧栏"></a>设置侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。可以通过修改主题配置文件中的sidebar字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置，其二是侧栏显示的时机。</p>
+<ol>
+<li><p>设置侧栏的位置，修改sidebar.position的值，支持的选项有：</p>
+<ul>
+<li>left-靠左放置</li>
+<li>right-靠右放置</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>目前仅 Pisces Scheme 支持 position 配置。影响版本5.0.0及更低版本。</p>
+</blockquote>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">sidebar:</span></span><br><span class="line"><span class="symbol">  position:</span> left</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>设置侧栏显示的时机，修改sidebar.display的值，支持的选项有：</p>
+<ul>
+<li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li>always - 在所有页面中都显示</li>
+<li>hide - 在所有页面中都隐藏（可以手动展开）</li>
+<li>remove - 完全移除</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">sidebar:</span></span><br><span class="line"><span class="symbol">  display:</span> post</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -823,7 +862,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Next"><span class="nav-number">2.</span> <span class="nav-text">安装Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载主题"><span class="nav-number">2.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">2.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题"><span class="nav-number">2.3.</span> <span class="nav-text">验证主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next"><span class="nav-number">3.</span> <span class="nav-text">配置Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择scheme"><span class="nav-number">3.1.</span> <span class="nav-text">选择scheme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置语言"><span class="nav-number">3.2.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置菜单"><span class="nav-number">3.3.</span> <span class="nav-text">设置菜单</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Next"><span class="nav-number">2.</span> <span class="nav-text">安装Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载主题"><span class="nav-number">2.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">2.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题"><span class="nav-number">2.3.</span> <span class="nav-text">验证主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next"><span class="nav-number">3.</span> <span class="nav-text">配置Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择scheme"><span class="nav-number">3.1.</span> <span class="nav-text">选择scheme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置语言"><span class="nav-number">3.2.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置菜单"><span class="nav-number">3.3.</span> <span class="nav-text">设置菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置侧栏"><span class="nav-number">3.4.</span> <span class="nav-text">设置侧栏</span></a></li></ol></li></ol></div>
             
 
           </div>
